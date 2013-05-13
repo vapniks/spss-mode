@@ -1,8 +1,96 @@
+;;; spss.el --- Major-mode for editing SPSS program files
+
+;; Filename: spss.el
+;; Description: Major-mode for editing SPSS program files
+;; Author: Joe Bloggs <vapniks@yahoo.com>
+;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
+;; Copyleft (Ↄ) 2013, Joe Bloggs, all rites reversed.
+;; Created: 2008/08/01
+;; Version: 0.1
+;; Last-Updated: 2013-05-13 17:16:16
+;;           By: Joe Bloggs
+;; URL: https://github.com/vapniks/spss
+;; Keywords: languages
+;; Compatibility: GNU Emacs 24.3.1
+;; Package-Requires:  
+;;
+;; Features that might be required by this library:
+;;
+;; 
+;;
+
+;;; This file is NOT part of GNU Emacs
+
+;;; License
+;;
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program; see the file COPYING.
+;; If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary: 
+;;
+;; Bitcoin donations gratefully accepted: 1MSYn98e4FpXYgihMpqFN4AMSZKsCGKHKX
+;;
+;; This library should provide font highlighting for SPSS program files.
+;; It doesn't seem to work very well, but since I don't use SPSS anymore
+;; I leave it to someone else to fix up.
+;;
+;;;;
 
 
-;; spss mode
-;; Ben Veal 01/08/08
+;;; Installation:
+;;
+;; Put spss.el in a directory in your load-path, e.g. ~/.emacs.d/
+;; You can add a directory to your load-path with the following line in ~/.emacs
+;; (add-to-list 'load-path (expand-file-name "~/elisp"))
+;; where ~/elisp is the directory you want to add 
+;; (you don't need to do this for ~/.emacs.d - it's added by default).
+;;
+;; Add the following to your ~/.emacs startup file.
+;;
+;; (require 'spss)
 
+;;; Customize:
+;;
+;; To automatically insert descriptions of customizable variables defined in this buffer
+;; place point at the beginning of the next line and do: M-x auto-document
+
+;;
+;; All of the above can customized by:
+;;      M-x customize-group RET spss RET
+;;
+
+;;; Change log:
+;;	
+;; 2013/05/13
+;;      * First released.
+;; 
+
+;;; Acknowledgements:
+;;
+;; 
+;;
+
+;;; TODO
+;;
+;; This needs some work, but I don't really use SPSS anymore so I'm leaving it to someone else
+;; to take over.
+;;
+
+;;; Require
+
+
+;;; Code:
 
 (defvar spss-mode-hook nil)
 (defvar spss-mode-map
@@ -106,10 +194,15 @@
   (local-set-key (kbd "C-c C-u") 'uncomment-region)
   (setq major-mode 'spss-mode)
   (setq mode-name "SPSS syntax")
-
   (run-hooks 'spss-mode-hook))
 
 (provide 'spss)
+
+;; (magit-push)
+;; (yaoddmuse-post "EmacsWiki" "spss.el" (buffer-name) (buffer-string) "update")
+
+;;; spss.el ends here
+
 
 
 	  
