@@ -1,0 +1,29 @@
+* Library Information
+ Readme.org --- Major-mode for editing SPSS program files
+
+ - Filename :: [[file:spss.el][spss.el]]
+ - Description :: Major-mode for editing SPSS program files
+ - Author :: Joe Bloggs <vapniks@yahoo.com>
+ - Maintainer :: Joe Bloggs <vapniks@yahoo.com>
+Copyleft (Ↄ) 2013, Joe Bloggs, all rites reversed.
+ - Created :: 2008/08/01
+ - Version :: 0.1
+ - Last-Updated :: 2013-05-13 17:16:16
+ -           By :: Joe Bloggs
+ - URL :: https://github.com/vapniks/spss
+ - Keywords :: languages
+ - Compatibility :: GNU Emacs 24.3.1
+Package-Requires:  
+
+* Commentary
+
+This library should provide font highlighting for SPSS program files.
+It doesn't seem to work very well, but since I don't use SPSS anymore
+I leave it to someone else to fix up. 
+The github repo is here if you want to fork it: https://github.com/vapniks/spss
+
+* Installation
+
+ - If you have [[http://www.marmalade-repo.org/][marmalade-repo.org]], this spss is part of the emacs packages you can install.  Just type M-x package-install spss marmalade 
+ - Otherwise download the library from here Lisp:spss, and put it in a directory in the emacs load path, like ~/.emacs.d
+ - Add (require 'spss) in your ~/.emacs file
